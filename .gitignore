@@ -21,3 +21,9 @@ data/state.json
 *.db-wal
 *.db-shm
 bin/
+
+# 解压产物（从 *.tar.gz 再生的模板/PoC 数据）：本地保留 tar.gz 源，展开后的大目录不入库。
+vuln-poc/custom-templates/
+vuln-poc/nuclei-templates/
+vuln-poc/poc-exploits/
+xc-vuln/xinchuang-templates/
