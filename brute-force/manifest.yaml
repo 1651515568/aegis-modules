@@ -1,0 +1,17 @@
+id: brute-force
+name: 弱口令爆破
+version: 0.1.0
+author: aegis-team
+description: "多协议多目标并发弱口令爆破：SSH/FTP/HTTP/MySQL/Redis/PostgreSQL/Telnet/SMTP"
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - brute:view
+  - brute:run
+nav:
+  group: 扫描探测
+  label: 弱口令爆破
+  icon: KeySquare
+  order: 20
+storage:
+  migrations: migrations

@@ -1,0 +1,17 @@
+id: asset-collect
+name: 资产收集
+version: 0.2.0
+author: aegis-team
+description: 多维度企业资产收集：整合网络测绘（Hunter/FOFA/ZoomEye/Quake/Shodan/SecurityTrails/Censys/VirusTotal/Chaos/微步/零零信安）与企业情报（天眼查/企查查/爱企查/小蓝本/七麦/风鸟）平台，被动发现域名、IP、ICP 备案、移动 App 等全量数字资产。
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - asset:view
+  - asset:collect
+nav:
+  group: 资产测绘
+  label: 资产收集
+  icon: Layers
+  order: 41
+storage:
+  migrations: migrations

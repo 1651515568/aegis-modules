@@ -1,0 +1,16 @@
+{
+  "id": "js-extract",
+  "name": "JS 信息提取",
+  "version": "0.1.0",
+  "author": "aegis-team",
+  "description": "扫描探测：爬取目标页面 JS 文件，静态提取 API 端点、密钥凭据、内网地址、云存储 URL、Source Map 等敏感信息。",
+  "permissions": ["jsextract:view", "jsextract:scan"],
+  "nav": {
+    "group": "扫描探测",
+    "label": "JS 信息提取",
+    "icon": "FileCode2",
+    "order": 18
+  },
+  "headerTitle": "JS 信息提取",
+  "features": { "findings": true }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "xc-vuln",
+  "name": "信创漏洞库",
+  "version": "1.0.0",
+  "description": "国产软硬件信创漏洞模板库，覆盖国产OA、数据库、中间件、网络与安全设备。",
+  "nav": {
+    "group": "漏洞管理",
+    "label": "信创漏洞库",
+    "icon": "ShieldAlert",
+    "order": 53
+  },
+  "headerTitle": "信创漏洞库"
+}

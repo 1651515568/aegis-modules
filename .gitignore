@@ -1,0 +1,23 @@
+# AEGIS 能力模块集 —— 独立维护仓库
+# 本仓库存放 engine 侧能力模块（每个 <id>/ 为一个自包含模块：Go 引擎半身 + web/ 前端半身）。
+# 部署/开发时整体投射到平台仓库的 engine/modules/ 下（放入即被 go generate 自动纳入、
+# reconcile_web_links 自动建前端软链）。
+
+# macOS 垃圾
+.DS_Store
+__MACOSX/
+._*
+
+# 压缩包（拷贝/解压残留）
+*.zip
+
+# 前端依赖 / 构建产物（模块 web/ 若本地起过）
+node_modules/
+dist/
+
+# 引擎运行态（模块若带本地 data）
+data/state.json
+*.db
+*.db-wal
+*.db-shm
+bin/

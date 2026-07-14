@@ -1,0 +1,17 @@
+id: scan-probe
+name: 指纹识别
+version: 0.1.0
+author: aegis-team
+description: Web 指纹识别：CMS 检测、WAF 识别、中间件与框架版本指纹。
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - probe:view
+  - probe:scan
+nav:
+  group: 扫描探测
+  label: 指纹识别
+  icon: Fingerprint
+  order: 12
+storage:
+  migrations: migrations

@@ -1,0 +1,15 @@
+{
+  "id": "osint-fofa",
+  "name": "空间测绘",
+  "version": "0.1.0",
+  "author": "aegis-team",
+  "description": "资产测绘：对接 FOFA / Hunter / Shodan / ZoomEye / Quake 360 等空间测绘平台，批量拉取网络资产并归档。",
+  "permissions": ["asset:collect"],
+  "nav": {
+    "group": "资产测绘",
+    "label": "空间测绘",
+    "icon": "Satellite",
+    "order": 3
+  },
+  "headerTitle": "空间测绘"
+}

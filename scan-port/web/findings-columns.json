@@ -1,0 +1,11 @@
+{
+  "_comment": "本模块命中展示列(平台 TaskDetail 据此出表)。key=对应 /findings 返回 item 的字段名;label=中文列标题;kind=渲染样式(severity 着色等级标签 / tag 灰色胶囊 / mono 等宽,省略=纯文本)。从上到下即列从左到右的顺序。维护只改本文件。",
+  "columns": [
+    { "key": "host",    "label": "主机",   "kind": "mono" },
+    { "key": "port",    "label": "端口" },
+    { "key": "proto",   "label": "协议",   "kind": "tag" },
+    { "key": "service", "label": "服务",   "kind": "tag" },
+    { "key": "banner",  "label": "Banner", "kind": "mono" },
+    { "key": "foundAt", "label": "发现时间" }
+  ]
+}

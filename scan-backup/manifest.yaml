@@ -1,0 +1,17 @@
+id: scan-backup
+name: 备份文件
+version: 0.9.0
+author: redops-team
+description: 对真实目标进行备份/敏感文件与源码泄露存在性探测(HEAD/Range,内置 SecLists 字典)
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - backup:view
+  - backup:scan
+nav:
+  group: 扫描探测
+  label: 备份文件
+  icon: FileArchive   # lucide 图标名，前端按名解析；模块自描述、无中心映射
+  order: 2
+storage:
+  migrations: migrations   # 模块自有表:启用时由框架按本目录下 *.sql 幂等建表

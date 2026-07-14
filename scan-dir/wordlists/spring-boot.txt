@@ -1,0 +1,100 @@
+# Spring Boot / Spring Actuator / Spring Security 常见暴露路径
+# 来源：Spring Boot Actuator 文档 + SecLists spring-boot.txt + 实战经验
+
+# ── Actuator（/actuator 前缀）────────────────────────────────────────────────
+/actuator
+/actuator/health
+/actuator/health/liveness
+/actuator/health/readiness
+/actuator/info
+/actuator/env
+/actuator/beans
+/actuator/configprops
+/actuator/metrics
+/actuator/loggers
+/actuator/logfile
+/actuator/trace
+/actuator/httptrace
+/actuator/dump
+/actuator/threaddump
+/actuator/heapdump
+/actuator/shutdown
+/actuator/restart
+/actuator/pause
+/actuator/resume
+/actuator/mappings
+/actuator/auditevents
+/actuator/caches
+/actuator/conditions
+/actuator/flyway
+/actuator/integrationgraph
+/actuator/jolokia
+/actuator/liquibase
+/actuator/scheduledtasks
+/actuator/sessions
+/actuator/refresh
+/actuator/features
+
+# ── 无前缀（低版本 Spring Boot 1.x）────────────────────────────────────────
+/health
+/info
+/env
+/metrics
+/trace
+/dump
+/shutdown
+/beans
+/autoconfig
+/configprops
+/mappings
+/logfile
+/heapdump
+/threaddump
+
+# ── 管理端点 ──────────────────────────────────────────────────────────────────
+/manage
+/management
+/management/health
+/management/info
+/management/env
+/management/actuator
+/admin
+/admin/actuator
+
+# ── Swagger / OpenAPI ────────────────────────────────────────────────────────
+/swagger-ui.html
+/swagger-ui/
+/swagger-ui/index.html
+/swagger-resources
+/swagger-resources/configuration/ui
+/swagger-resources/configuration/security
+/v2/api-docs
+/v3/api-docs
+/v3/api-docs.yaml
+/v3/api-docs/swagger-config
+/webjars/swagger-ui/
+/webjars/springfox-swagger-ui/
+
+# ── H2 Console / Druid / 数据库管理 ─────────────────────────────────────────
+/h2-console
+/h2-console/login.do
+/console
+/druid
+/druid/login.html
+/druid/index.html
+/druid/webstat.html
+
+# ── API 路径 ──────────────────────────────────────────────────────────────────
+/api
+/api/v1
+/api/v2
+/api/v3
+
+# ── 日志 / 配置泄露 ──────────────────────────────────────────────────────────
+/application.properties
+/application.yml
+/application.yaml
+/application-dev.properties
+/application-prod.properties
+/logback.xml
+/log4j2.xml

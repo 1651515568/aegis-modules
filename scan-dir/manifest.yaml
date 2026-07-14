@@ -1,0 +1,17 @@
+id: scan-dir
+name: 目录扫描
+version: 0.7.2
+author: redops-team
+description: 对授权 Web 目标做目录/文件爆破(dirsearch/SecLists/RAFT 权威字典 + %EXT% + FUZZ + 动态软 404 相似度过滤 + 链接抽取 + 备份衍生 + 递归),识别隐藏路径、后台入口与源码/配置泄露
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - dirscan:view
+  - dirscan:scan
+nav:
+  group: 扫描探测
+  label: 目录扫描
+  icon: FolderSearch   # lucide 图标名(PascalCase),前端按名解析;模块自描述、无中心映射
+  order: 4
+storage:
+  migrations: migrations   # 模块自有表:启用时由框架按本目录下 *.sql 幂等建表

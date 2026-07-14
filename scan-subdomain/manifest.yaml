@@ -1,0 +1,17 @@
+id: scan-subdomain
+name: 子域名枚举
+version: 0.1.0
+author: aegis-team
+description: 子域名枚举：字典爆破、DNS 递归、证书透明度日志（crt.sh）。
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - subdomain:view
+  - subdomain:scan
+nav:
+  group: 扫描探测
+  label: 子域名枚举
+  icon: Network
+  order: 13
+storage:
+  migrations: migrations

@@ -1,0 +1,5 @@
+package bruteforce
+
+import "redops/core"
+
+func init() { core.MustRegister(New()) }

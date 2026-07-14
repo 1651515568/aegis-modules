@@ -1,0 +1,14 @@
+id: xc-vuln
+name: 信创漏洞库
+version: 1.0.0
+author: aegis-team
+description: 国产软硬件信创漏洞模板库，覆盖国产OA、数据库、中间件、网络与安全设备。
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - xcvuln:view
+nav:
+  group: 漏洞管理
+  label: 信创漏洞库
+  icon: ShieldAlert
+  order: 53

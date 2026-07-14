@@ -1,0 +1,16 @@
+{
+  "id": "mobile-app",
+  "name": "APP安全",
+  "version": "0.1.0",
+  "author": "aegis-team",
+  "description": "移动安全：Android/iOS 应用安全检测。",
+  "permissions": ["mobile:app"],
+  "status": "placeholder",
+  "nav": {
+    "group": "移动安全",
+    "label": "APP安全",
+    "icon": "Smartphone",
+    "order": 51
+  },
+  "headerTitle": "APP 安全检测"
+}

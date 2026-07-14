@@ -1,0 +1,16 @@
+{
+  "id": "scan-dir",
+  "name": "目录扫描",
+  "version": "0.7.2",
+  "author": "aegis-team",
+  "description": "扫描探测：对授权 Web 目标做目录/文件爆破，dirsearch/SecLists/RAFT 权威字典 + %EXT% + FUZZ + 动态软 404 相似度过滤 + 链接抽取 + 备份衍生 + 递归，识别隐藏路径与源码/配置泄露。",
+  "permissions": ["dirscan:view", "dirscan:scan"],
+  "nav": {
+    "group": "扫描探测",
+    "label": "目录扫描",
+    "icon": "FolderSearch",
+    "order": 14
+  },
+  "headerTitle": "目录扫描",
+  "features": { "findings": true }
+}

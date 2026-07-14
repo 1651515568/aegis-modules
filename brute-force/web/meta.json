@@ -1,0 +1,16 @@
+{
+  "id": "brute-force",
+  "name": "弱口令爆破",
+  "version": "0.1.0",
+  "author": "aegis-team",
+  "description": "多协议多目标并发弱口令爆破：SSH/FTP/Telnet/SMTP/POP3/IMAP/HTTP/MySQL/MSSQL/Redis/PostgreSQL/MongoDB/LDAP/SMB/VNC/达梦DM，每协议独立字典配置。",
+  "permissions": ["brute:view", "brute:run"],
+  "nav": {
+    "group": "扫描探测",
+    "label": "弱口令爆破",
+    "icon": "KeySquare",
+    "order": 20
+  },
+  "headerTitle": "弱口令爆破",
+  "features": { "findings": true }
+}

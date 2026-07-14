@@ -1,0 +1,16 @@
+{
+  "id": "c2-demo",
+  "name": "C2 会话管理",
+  "version": "0.1.0",
+  "author": "aegis-team",
+  "description": "C2 Beacon 会话管理演示能力：会话列表、交互终端、快捷指令。",
+  "permissions": ["c2:view", "c2:interact"],
+  "status": "placeholder",
+  "nav": {
+    "group": "后渗透",
+    "label": "C2 会话管理",
+    "icon": "Terminal",
+    "order": 33
+  },
+  "headerTitle": "C2 会话管理"
+}

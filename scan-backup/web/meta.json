@@ -1,0 +1,16 @@
+{
+  "id": "scan-backup",
+  "name": "备份文件",
+  "version": "0.9.0",
+  "author": "aegis-team",
+  "description": "扫描探测：备份文件与敏感文件泄露探测。",
+  "permissions": ["backup:view", "backup:scan"],
+  "nav": {
+    "group": "扫描探测",
+    "label": "备份文件",
+    "icon": "FileArchive",
+    "order": 11
+  },
+  "headerTitle": "备份文件探测",
+  "features": { "findings": true }
+}

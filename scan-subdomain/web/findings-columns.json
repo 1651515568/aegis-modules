@@ -1,0 +1,11 @@
+{
+  "_comment": "本模块命中展示列(平台 TaskDetail 据此出表)。key=对应 /findings 返回 item 的字段名;label=中文列标题;kind=渲染样式(severity 着色等级标签 / tag 灰色胶囊 / mono 等宽,省略=纯文本)。从上到下即列从左到右的顺序。维护只改本文件。",
+  "columns": [
+    { "key": "subdomain", "label": "子域名",   "kind": "mono" },
+    { "key": "ip",        "label": "IP",       "kind": "mono" },
+    { "key": "cdn",       "label": "CDN/WAF",  "kind": "tag" },
+    { "key": "status",    "label": "状态码" },
+    { "key": "title",     "label": "标题" },
+    { "key": "source",    "label": "来源",     "kind": "tag" }
+  ]
+}

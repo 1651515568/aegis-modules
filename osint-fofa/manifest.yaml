@@ -1,0 +1,17 @@
+id: osint-fofa
+name: 空间测绘
+version: 0.1.0
+author: redops-team
+description: 对接 FOFA / Hunter / Shodan / ZoomEye / Quake 360 等空间测绘平台，通过自定义查询语法批量拉取目标资产
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - osint:view
+  - osint:query
+nav:
+  group: 资产测绘
+  label: 空间测绘
+  icon: Satellite
+  order: 43
+storage:
+  migrations: migrations

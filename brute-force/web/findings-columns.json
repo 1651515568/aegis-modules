@@ -1,0 +1,10 @@
+{
+  "_comment": "本模块命中展示列(平台 TaskDetail 据此出表)。key=对应 /findings 返回 item 的字段名;label=中文列标题;kind=渲染样式(severity 着色等级标签 / tag 灰色胶囊 / mono 等宽,省略=纯文本)。从上到下即列从左到右的顺序。维护只改本文件。",
+  "columns": [
+    { "key": "protocol", "label": "协议",   "kind": "tag" },
+    { "key": "target",   "label": "目标",   "kind": "mono" },
+    { "key": "username", "label": "用户名", "kind": "mono" },
+    { "key": "password", "label": "密码",   "kind": "mono" },
+    { "key": "foundAt",  "label": "发现时间" }
+  ]
+}

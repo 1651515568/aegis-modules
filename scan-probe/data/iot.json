@@ -1,0 +1,349 @@
+[
+  {"product":"组态王 KingView","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["kvweb","kingview"]},
+    {"location":"body","keywords":["kvhttpsvr"]},
+    {"location":"title","keywords":["组态王"]}
+  ]},
+  {"product":"MCGS","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["mcgsweb"]},
+    {"location":"body","keywords":["mcgs_network"]},
+    {"location":"title","keywords":["mcgs"]}
+  ]},
+  {"product":"力控 ForceControl","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["forcecontrol"]},
+    {"location":"title","keywords":["力控"]},
+    {"location":"body","keywords":["pforce","scada"]}
+  ]},
+  {"product":"研华 WebAccess","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["webaccess","advantech"]},
+    {"location":"title","keywords":["webaccess"]}
+  ]},
+  {"product":"浙大中控 SUPCON","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["supcon"]},
+    {"location":"title","keywords":["supcon"]}
+  ]},
+  {"product":"和利时 HOLLiAS","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["hollysys"]},
+    {"location":"body","keywords":["hollias"]}
+  ]},
+  {"product":"世纪星 SCADA","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["centurystar"]},
+    {"location":"title","keywords":["世纪星"]}
+  ]},
+  {"product":"Ignition SCADA","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["ignition","inductiveautomation"]},
+    {"location":"title","keywords":["ignition gateway"]}
+  ]},
+  {"product":"Siemens WinCC","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["wincc","webnavigator"]},
+    {"location":"title","keywords":["wincc"]}
+  ]},
+  {"product":"Siemens S7 Web Server","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["/portal/portal.mwsl"]},
+    {"location":"body","keywords":["siemens ag","s7-"]}
+  ]},
+  {"product":"Siemens SINEMA","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["sinema","scalance"]},
+    {"location":"title","keywords":["sinema"]}
+  ]},
+  {"product":"Schneider Modicon","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["modicon"]},
+    {"location":"title","keywords":["modicon"]}
+  ]},
+  {"product":"Schneider EcoStruxure","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["ecostruxure"]},
+    {"location":"title","keywords":["ecostruxure"]}
+  ]},
+  {"product":"Rockwell FactoryTalk","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["factorytalk"]},
+    {"location":"title","keywords":["factorytalk"]}
+  ]},
+  {"product":"Rockwell PanelView","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["panelview","rockwell"]},
+    {"location":"title","keywords":["panelview"]}
+  ]},
+  {"product":"GE iFIX","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["proficy","ifix"]},
+    {"location":"title","keywords":["ifix"]}
+  ]},
+  {"product":"GE CIMPLICITY","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["cimplicity"]},
+    {"location":"title","keywords":["cimplicity"]}
+  ]},
+  {"product":"Emerson DeltaV","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["deltav","emerson"]},
+    {"location":"title","keywords":["deltav"]}
+  ]},
+  {"product":"Honeywell Experion","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["experion","honeywell"]},
+    {"location":"title","keywords":["experion"]}
+  ]},
+  {"product":"ABB System 800xA","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["800xa","abb"]},
+    {"location":"title","keywords":["800xa"]}
+  ]},
+  {"product":"AVEVA InTouch","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["intouch","aveva"]},
+    {"location":"title","keywords":["intouch"]}
+  ]},
+  {"product":"Kepware KEPServerEX","category":"ICS/SCADA","rules":[
+    {"location":"body","keywords":["kepware","kepserverex"]},
+    {"location":"title","keywords":["kepserverex"]}
+  ]},
+  {"product":"Moxa NPort","category":"Industrial Networking","rules":[
+    {"location":"title","keywords":["moxa nport"]},
+    {"location":"body","keywords":["moxa","nport"]}
+  ]},
+  {"product":"Moxa EDS Switch","category":"Industrial Networking","rules":[
+    {"location":"title","keywords":["moxa","eds"]},
+    {"location":"body","keywords":["moxa eds"]}
+  ]},
+  {"product":"Phoenix Contact FL Switch","category":"Industrial Networking","rules":[
+    {"location":"body","keywords":["phoenixcontact","fl switch"]},
+    {"location":"title","keywords":["phoenix contact"]}
+  ]},
+  {"product":"四信通信 F-Series Router","category":"Industrial Networking","rules":[
+    {"location":"body","keywords":["four-faith"]},
+    {"location":"title","keywords":["四信"]},
+    {"location":"body","keywords":["4g industrial router","four faith"]}
+  ]},
+  {"product":"研华 ADAM","category":"Industrial Networking","rules":[
+    {"location":"body","keywords":["advantech adam"]},
+    {"location":"title","keywords":["adam-"]}
+  ]},
+  {"product":"Ruijie 锐捷","category":"Network Device","rules":[
+    {"location":"body","keywords":["ruijie","rg-"]},
+    {"location":"title","keywords":["ruijie"]},
+    {"location":"title","keywords":["锐捷"]}
+  ]},
+  {"product":"Maipu 迈普","category":"Network Device","rules":[
+    {"location":"body","keywords":["maipu"]},
+    {"location":"title","keywords":["maipu"]},
+    {"location":"title","keywords":["迈普"]}
+  ]},
+  {"product":"TP-Link Router","category":"Network Device","rules":[
+    {"location":"body","keywords":["tplogin"]},
+    {"location":"title","keywords":["tp-link","tl-"]},
+    {"location":"body","keywords":["tp-link","wireless router"]}
+  ]},
+  {"product":"D-Link","category":"Network Device","rules":[
+    {"location":"body","keywords":["d-link","dlink"]},
+    {"location":"title","keywords":["d-link"]}
+  ]},
+  {"product":"Netgear","category":"Network Device","rules":[
+    {"location":"body","keywords":["netgear"]},
+    {"location":"title","keywords":["netgear"]}
+  ]},
+  {"product":"Ubiquiti UniFi","category":"Network Device","rules":[
+    {"location":"body","keywords":["unifi","ubiquiti"]},
+    {"location":"title","keywords":["unifi controller"]}
+  ]},
+  {"product":"Ubiquiti AirOS","category":"Network Device","rules":[
+    {"location":"body","keywords":["airos","airmax"]},
+    {"location":"title","keywords":["airmax"]}
+  ]},
+  {"product":"Aruba Networks","category":"Network Device","rules":[
+    {"location":"body","keywords":["aruba","arubanetworks"]},
+    {"location":"title","keywords":["aruba"]}
+  ]},
+  {"product":"ZTE Router","category":"Network Device","rules":[
+    {"location":"body","keywords":["zte","zxr10"]},
+    {"location":"title","keywords":["zte"]}
+  ]},
+  {"product":"Huawei CloudEngine/AR","category":"Network Device","rules":[
+    {"location":"body","keywords":["vrp","huawei"]},
+    {"location":"body","keywords":["cloudengine","huawei switch"]}
+  ]},
+  {"product":"Palo Alto PAN-OS","category":"Network Device","rules":[
+    {"location":"body","keywords":["pan-os","palo alto networks"]},
+    {"location":"title","keywords":["pan-os"]}
+  ]},
+  {"product":"Fortinet FortiGate","category":"Network Device","rules":[
+    {"location":"body","keywords":["fortigate","fortinet"]},
+    {"location":"title","keywords":["fortigate"]}
+  ]},
+  {"product":"Citrix ADC/NetScaler","category":"Network Device","rules":[
+    {"location":"body","keywords":["netscaler","citrix"]},
+    {"location":"title","keywords":["netscaler"]},
+    {"location":"title","keywords":["citrix gateway"]}
+  ]},
+  {"product":"F5 BIG-IP","category":"Network Device","rules":[
+    {"location":"body","keywords":["big-ip","f5 networks"]},
+    {"location":"title","keywords":["big-ip"]}
+  ]},
+  {"product":"SonicWall","category":"Network Device","rules":[
+    {"location":"body","keywords":["sonicwall"]},
+    {"location":"title","keywords":["sonicwall"]}
+  ]},
+  {"product":"Hikvision IVMS","category":"Surveillance","rules":[
+    {"location":"body","keywords":["hikvision","/doc/page/login"]},
+    {"location":"body","keywords":["/isapi/","hikvision"]}
+  ]},
+  {"product":"Dahua Web Client","category":"Surveillance","rules":[
+    {"location":"body","keywords":["dahua","dhipinstall"]},
+    {"location":"title","keywords":["dahua"]}
+  ]},
+  {"product":"Uniview NVR/IPC","category":"Surveillance","rules":[
+    {"location":"body","keywords":["uniview"]},
+    {"location":"title","keywords":["uniview"]}
+  ]},
+  {"product":"AXIS Camera","category":"Surveillance","rules":[
+    {"location":"body","keywords":["axiscam"]},
+    {"location":"title","keywords":["axis communications"]}
+  ]},
+  {"product":"Milestone XProtect","category":"Surveillance","rules":[
+    {"location":"body","keywords":["milestone","xprotect"]},
+    {"location":"title","keywords":["xprotect"]}
+  ]},
+  {"product":"HP iLO","category":"Server Management","rules":[
+    {"location":"body","keywords":["integrated lights-out","ilo"]},
+    {"location":"title","keywords":["ilo "]},
+    {"location":"body","keywords":["hpe ilo"]}
+  ]},
+  {"product":"Dell iDRAC","category":"Server Management","rules":[
+    {"location":"body","keywords":["idrac","dell emc"]},
+    {"location":"title","keywords":["idrac"]}
+  ]},
+  {"product":"Supermicro IPMI","category":"Server Management","rules":[
+    {"location":"body","keywords":["supermicro","ipmi"]},
+    {"location":"title","keywords":["supermicro"]}
+  ]},
+  {"product":"Lenovo XClarity","category":"Server Management","rules":[
+    {"location":"body","keywords":["xclarity","lenovo"]},
+    {"location":"title","keywords":["xclarity"]}
+  ]},
+  {"product":"VMware ESXi","category":"Virtualization","rules":[
+    {"location":"body","keywords":["vmware esxi"]},
+    {"location":"title","keywords":["esxi"]}
+  ]},
+  {"product":"Proxmox VE","category":"Virtualization","rules":[
+    {"location":"body","keywords":["proxmox","proxmox virtual environment"]},
+    {"location":"title","keywords":["proxmox"]}
+  ]},
+  {"product":"OPNsense","category":"Firewall","rules":[
+    {"location":"body","keywords":["opnsense"]},
+    {"location":"title","keywords":["opnsense"]}
+  ]},
+  {"product":"pfSense","category":"Firewall","rules":[
+    {"location":"body","keywords":["pfsense"]},
+    {"location":"title","keywords":["pfsense"]}
+  ]},
+  {"product":"QNAP QTS","category":"NAS","rules":[
+    {"location":"body","keywords":["qnap","qts"]},
+    {"location":"title","keywords":["qnap"]}
+  ]},
+  {"product":"TrueNAS","category":"NAS","rules":[
+    {"location":"body","keywords":["truenas"]},
+    {"location":"title","keywords":["truenas"]}
+  ]},
+  {"product":"HP LaserJet EWS","category":"Printer","rules":[
+    {"location":"body","keywords":["hp laserjet"]},
+    {"location":"title","keywords":["hp laserjet"]},
+    {"location":"title","keywords":["hp color laserjet"]}
+  ]},
+  {"product":"Canon imageRUNNER","category":"Printer","rules":[
+    {"location":"body","keywords":["canon","imagerunner"]},
+    {"location":"title","keywords":["imagerunner"]}
+  ]},
+  {"product":"Ricoh WebImage Monitor","category":"Printer","rules":[
+    {"location":"body","keywords":["ricoh","webimage monitor"]},
+    {"location":"title","keywords":["ricoh"]}
+  ]},
+  {"product":"Xerox","category":"Printer","rules":[
+    {"location":"body","keywords":["xerox","colorqube"]},
+    {"location":"title","keywords":["xerox"]}
+  ]},
+  {"product":"APC UPS Network Management","category":"Power","rules":[
+    {"location":"body","keywords":["american power conversion"]},
+    {"location":"title","keywords":["smart-ups"]},
+    {"location":"title","keywords":["apc ups"]}
+  ]},
+  {"product":"Eaton UPS","category":"Power","rules":[
+    {"location":"body","keywords":["eaton","powerware"]},
+    {"location":"title","keywords":["eaton ups"]}
+  ]},
+  {"product":"华为 eSight","category":"Network Management","rules":[
+    {"location":"body","keywords":["esight","huawei"]},
+    {"location":"title","keywords":["esight"]}
+  ]},
+  {"product":"SolarWinds Orion","category":"Network Management","rules":[
+    {"location":"body","keywords":["solarwinds","orion"]},
+    {"location":"title","keywords":["solarwinds"]}
+  ]},
+  {"product":"ManageEngine","category":"IT Management","rules":[
+    {"location":"body","keywords":["manageengine"]},
+    {"location":"title","keywords":["manageengine"]}
+  ]},
+  {"product":"PRTG Network Monitor","category":"Monitoring","rules":[
+    {"location":"body","keywords":["prtg"]},
+    {"location":"title","keywords":["prtg"]}
+  ]},
+  {"product":"Cacti","category":"Monitoring","rules":[
+    {"location":"body","keywords":["cacti","the cacti group"]},
+    {"location":"title","keywords":["cacti"]}
+  ]},
+  {"product":"Open-Falcon","category":"Monitoring","rules":[
+    {"location":"body","keywords":["open-falcon"]},
+    {"location":"title","keywords":["open-falcon"]}
+  ]},
+  {"product":"Netdata","category":"Monitoring","rules":[
+    {"location":"body","keywords":["netdata","netdatacloud"]},
+    {"location":"title","keywords":["netdata"]}
+  ]},
+  {"product":"ActiveMQ Web Console","category":"Message Queue","rules":[
+    {"location":"body","keywords":["activemq","apache activemq"]},
+    {"location":"title","keywords":["activemq"]}
+  ]},
+  {"product":"Kafka Manager","category":"Message Queue","rules":[
+    {"location":"body","keywords":["kafka manager"]},
+    {"location":"title","keywords":["kafka manager"]}
+  ]},
+  {"product":"Flower (Celery)","category":"Task Queue","rules":[
+    {"location":"body","keywords":["flower","celery"]},
+    {"location":"title","keywords":["flower"]}
+  ]},
+  {"product":"Airflow","category":"Workflow","rules":[
+    {"location":"body","keywords":["airflow","apache airflow"]},
+    {"location":"title","keywords":["airflow"]}
+  ]},
+  {"product":"Artifactory","category":"Package Repository","rules":[
+    {"location":"body","keywords":["artifactory","jfrog"]},
+    {"location":"title","keywords":["artifactory"]}
+  ]},
+  {"product":"Vault (HashiCorp)","category":"Secrets Management","rules":[
+    {"location":"body","keywords":["hashicorp vault"]},
+    {"location":"title","keywords":["vault"]}
+  ]},
+  {"product":"Consul (HashiCorp)","category":"Service Mesh","rules":[
+    {"location":"body","keywords":["hashicorp consul"]},
+    {"location":"title","keywords":["consul"]}
+  ]},
+  {"product":"Redmine","category":"Project Management","rules":[
+    {"location":"body","keywords":["redmine"]},
+    {"location":"title","keywords":["redmine"]}
+  ]},
+  {"product":"Netbox","category":"IPAM","rules":[
+    {"location":"body","keywords":["netbox"]},
+    {"location":"title","keywords":["netbox"]}
+  ]},
+  {"product":"phpIPAM","category":"IPAM","rules":[
+    {"location":"body","keywords":["phpipam"]},
+    {"location":"title","keywords":["phpipam"]}
+  ]},
+  {"product":"MongoDB Express","category":"Database","rules":[
+    {"location":"body","keywords":["mongo-express"]},
+    {"location":"title","keywords":["mongo express"]}
+  ]},
+  {"product":"CouchDB Fauxton","category":"Database","rules":[
+    {"location":"body","keywords":["fauxton","couchdb"]},
+    {"location":"title","keywords":["fauxton"]}
+  ]},
+  {"product":"ClickHouse","category":"Database","rules":[
+    {"location":"body","keywords":["clickhouse"]},
+    {"location":"title","keywords":["clickhouse"]}
+  ]},
+  {"product":"Zulip","category":"Communication","rules":[
+    {"location":"body","keywords":["zulip"]},
+    {"location":"title","keywords":["zulip"]}
+  ]}
+]

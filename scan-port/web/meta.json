@@ -1,0 +1,16 @@
+{
+  "id": "scan-port",
+  "name": "端口扫描",
+  "version": "0.4.0",
+  "author": "aegis-team",
+  "description": "扫描探测：内嵌 masscan 高速端口发现，无权限时回退纯 Go connect/UDP，识别开放端口与服务 banner。",
+  "permissions": ["portscan:view", "portscan:scan"],
+  "nav": {
+    "group": "扫描探测",
+    "label": "端口扫描",
+    "icon": "Radar",
+    "order": 16
+  },
+  "headerTitle": "端口扫描",
+  "features": { "findings": true }
+}

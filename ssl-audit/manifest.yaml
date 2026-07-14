@@ -1,0 +1,17 @@
+id: ssl-audit
+name: SSL/TLS 审计
+version: 0.1.0
+author: redops-team
+description: 批量检测目标的 SSL/TLS 配置缺陷：证书有效性、弱协议版本、弱密码套件、HSTS 缺失。
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - ssl:view
+  - ssl:scan
+nav:
+  group: 扫描探测
+  label: SSL/TLS 审计
+  icon: ShieldCheck
+  order: 17
+storage:
+  migrations: migrations

@@ -1,0 +1,15 @@
+id: vuln-poc
+name: PoC 验证
+version: 0.1.0
+author: aegis-team
+description: 单条 PoC 精确验证：对指定目标投递单一 Nuclei 模板，跟踪漏洞生命周期（待确认→已确认→修复中→已修复）
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - vuln:scan
+  - vuln:view
+nav:
+  group: 漏洞管理
+  label: PoC 验证
+  icon: FlaskConical
+  order: 22

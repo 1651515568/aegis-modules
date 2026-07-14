@@ -1,0 +1,16 @@
+{
+  "id": "asset-collect",
+  "name": "资产收集",
+  "version": "0.2.0",
+  "author": "aegis-team",
+  "description": "资产测绘：网络测绘（11平台）+ 企业情报（6平台）多源并行资产收集。",
+  "permissions": ["asset:view", "asset:collect"],
+  "nav": {
+    "group": "资产测绘",
+    "label": "资产收集",
+    "icon": "Layers",
+    "order": 1
+  },
+  "headerTitle": "资产收集",
+  "features": { "findings": true }
+}

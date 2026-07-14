@@ -1,0 +1,15 @@
+id: vuln-scan
+name: 漏洞扫描
+version: 0.1.0
+author: aegis-team
+description: Nuclei 驱动的漏洞扫描：按 CVE/标签/严重性批量投递 PoC，异步任务，结果实时归档
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - vuln:scan
+  - vuln:view
+nav:
+  group: 漏洞管理
+  label: 漏洞扫描
+  icon: ScanSearch
+  order: 21

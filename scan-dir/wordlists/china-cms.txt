@@ -1,0 +1,480 @@
+# china-cms.txt — 国内 CMS / OA / 中间件 / 框架常见暴露路径
+# 来源：实战经验 + CNVD/Seebug 高频漏洞路径 + 国内渗透测试积累
+# 适用：ThinkPHP / 通达OA / 泛微OA / 致远OA / 蓝凌OA / PHPCMS / DedeCMS / Discuz
+#       Nacos / Dubbo / Apollo / Sentinel / Shiro / 宝塔面板 / Hikvision 等
+
+# ── ThinkPHP ──────────────────────────────────────────────────────────────────
+runtime/
+runtime/log/
+runtime/logs/
+runtime/cache/
+runtime/temp/
+runtime/session/
+Application/
+Application/Common/
+Application/Common/Conf/
+Application/Common/Conf/config.php
+Application/Home/
+application/
+application/config.php
+application/database.php
+application/common.php
+application/config/
+config/
+public/
+public/index.php
+extend/
+vendor/
+thinkphp/
+ThinkPHP/
+ThinkPHP/Library/
+think
+
+# ── Shiro 框架识别 ──────────────────────────────────────────────────────────────
+login
+login.do
+login.htm
+login.action
+logout
+logout.do
+index.do
+admin.do
+user.do
+api.do
+shiro-cas/
+shiro/
+
+# ── Nacos 服务发现（默认无认证高危暴露）──────────────────────────────────────
+nacos/
+nacos/index.html
+nacos/v1/
+nacos/v1/auth/login
+nacos/v1/auth/users
+nacos/v1/cs/configs
+nacos/v1/cs/configs/listener
+nacos/v1/cs/history/configs
+nacos/v1/ns/instance/list
+nacos/v1/ns/catalog/services
+nacos/v1/ns/service/list
+nacos/v1/ns/operator/servers
+nacos/v1/ns/raft/leader
+nacos/v1/console/
+nacos/v1/auth/token
+
+# ── Dubbo Admin ──────────────────────────────────────────────────────────────
+dubbo-admin/
+dubbo-admin/login
+dubbo-admin/governance/
+dubbo-admin/governance/providers
+dubbo-admin/governance/consumers
+dubbo-admin/service/
+dubbo-ops/
+dubbo-ops/login
+dubbo-monitor/
+dubbo-monitor/login
+dubbo-monitor/statistics
+
+# ── Apollo 配置中心 ───────────────────────────────────────────────────────────
+apollo/
+apollo-admin/
+apollo-portal/
+apollo-portal/signin
+openapi/
+open-api/
+portal/
+portal/signin
+
+# ── Sentinel 控制台 ───────────────────────────────────────────────────────────
+sentinel/
+sentinel-dashboard/
+sentinel-dashboard/login
+
+# ── Zipkin 链路追踪 ───────────────────────────────────────────────────────────
+zipkin/
+zipkin/api/
+zipkin/v2/
+zipkin/v2/services
+
+# ── MinIO 对象存储 ────────────────────────────────────────────────────────────
+minio/
+minio/login
+minio/health/live
+console/
+minio-console/
+
+# ── 通达OA (TONGDA) ──────────────────────────────────────────────────────────
+ispirit/
+ispirit/im/
+ispirit/im/upload.php
+ispirit/interface/
+ispirit/interface/gateway.php
+td_installer/
+td_installer/index.php
+oa/
+oa/html/
+oa/html/js/
+oa/login.php
+td/
+td/login.php
+addons/
+pda/
+pda/index.php
+pda/index/login/
+general/
+general/index.php
+
+# ── 泛微OA (E-Cology / E-Office) ────────────────────────────────────────────
+weaver/
+weaver/login/
+weaver/weeaverlogincheck.jsp
+weaver/interface/
+weaver/upload/
+wui/
+wui/index.html
+WEAVER/
+WUI/
+ecology/
+ecology/classbean/
+e-office/
+e-office/login.php
+remuseupload/
+fileupload.do
+ajax.do
+syn.asp
+upload.jsp
+mobile/
+mobile/plugin/
+
+# ── 致远OA (Seeyon / A8 / A6) ────────────────────────────────────────────────
+seeyon/
+seeyon/main.do
+seeyon/Login.do
+seeyon/thirdInterface/
+seeyon/resin-doc/
+seeyonNew/
+A6/
+A6/login.do
+A8/
+A8/login.do
+ctp.do
+login.do
+main.do
+download.do
+upload.do
+
+# ── 蓝凌OA (LANLING / KKERP) ─────────────────────────────────────────────────
+KKERP/
+lkadmin/
+lkadmin/login.php
+LKadmin/
+swfupload/
+swfupload/upload.php
+SWFUpload/
+custom/
+custom/page/
+
+# ── 宏景OA ───────────────────────────────────────────────────────────────────
+Honjoyoa/
+oa_app/
+oa_app/login.aspx
+
+# ── 用友NC / 畅捷通 ──────────────────────────────────────────────────────────
+yonyou/
+nc/
+nc/pub/
+nc/login.jsp
+uapws/
+uapws/service/
+
+# ── 金蝶EAS / K3 Cloud ───────────────────────────────────────────────────────
+eas/
+easwebclient/
+k3cloud/
+kingdee/
+
+# ── DedeCMS (织梦) ────────────────────────────────────────────────────────────
+dede/
+dede/login.php
+dede/sys_info.php
+dede/makehtml_homepage.php
+dede/index.php
+member/
+member/login.php
+special/
+include/
+include/dedeajax2.php
+uploads/
+plus/
+plus/download.php
+plus/recommend.php
+data/backupdata/
+data/cache/
+
+# ── Discuz ───────────────────────────────────────────────────────────────────
+forum.php
+member.php
+plugin.php
+portal.php
+group.php
+archiver/
+uc_server/
+uc_server/admin/index.php
+uc_client/
+uc_client/avatar.php
+uploadfile/
+data/
+data/attachment/
+config/config_global.php
+config/config_ucenter.php
+
+# ── PHPCMS ───────────────────────────────────────────────────────────────────
+phpcms/
+phpcms/modules/
+phpcms/libs/
+api.php
+index.php?m=member&c=index&a=login
+index.php?m=admin&c=index&a=login
+statics/
+caches/
+uploadfile/
+
+# ── Ecshop / Shopex ──────────────────────────────────────────────────────────
+ecshop/
+data/backup/
+data/sql_dump/
+includes/
+includes/lib_main.php
+includes/cls_template.php
+data/cache/
+upload/
+temp/
+update/
+
+# ── Z-Blog ───────────────────────────────────────────────────────────────────
+zb_users/
+zb_users/plugin/
+zb_users/theme/
+zb_system/
+zb_system/function/
+zb_system/cmd.php
+
+# ── ShopXo ───────────────────────────────────────────────────────────────────
+addons/shopxo/
+index.php?s=/index/home
+index.php?s=/admin/index/login
+public/upload/
+
+# ── EMLOG ────────────────────────────────────────────────────────────────────
+admin/
+content/
+include/
+emlog/
+data/ubb_cache/
+
+# ── 宝塔面板 (BT Panel) ──────────────────────────────────────────────────────
+bt/
+bt.php
+BT-Panel/
+BTPanel/
+pma_secure/
+phpmyadmin_panel/
+phpmyadmin/
+
+# ── 1Panel ───────────────────────────────────────────────────────────────────
+1panel/
+1panel/api/v1/
+1panel/api/v1/auth/login
+
+# ── WDCP / AMH ───────────────────────────────────────────────────────────────
+wdcpanel/
+wdcpanel/login.php
+amh-admin/
+amhpanel/
+
+# ── Jenkins (高频 Groovy RCE) ────────────────────────────────────────────────
+jenkins/
+jenkins/login
+jenkins/script
+jenkins/api/
+jenkins/api/json
+jenkins/manage/
+jenkins/computer/
+jenkins/credentials/
+jenkins/job/
+jenkins/blue/
+jenkins/asynchPeople/
+
+# ── GitLab ───────────────────────────────────────────────────────────────────
+gitlab/
+users/sign_in
+explore/
+help/
+api/v4/
+admin/
+admin/users
+
+# ── Harbor 容器仓库 ──────────────────────────────────────────────────────────
+harbor/
+harbor/sign-in
+api/v2.0/
+api/v2.0/projects
+api/v2.0/users
+
+# ── Grafana ──────────────────────────────────────────────────────────────────
+grafana/
+grafana/login
+grafana/api/
+grafana/api/org
+grafana/api/admin/users
+
+# ── Kibana ───────────────────────────────────────────────────────────────────
+kibana/
+kibana/app/kibana
+app/kibana
+
+# ── Prometheus ───────────────────────────────────────────────────────────────
+prometheus/
+prometheus/-/reload
+graph
+targets
+config
+service-discovery
+
+# ── Elasticsearch ─────────────────────────────────────────────────────────────
+_cat/
+_cat/indices
+_cat/nodes
+_cat/shards
+_cluster/
+_cluster/health
+_cluster/settings
+_nodes/
+
+# ── RabbitMQ ─────────────────────────────────────────────────────────────────
+rabbitmq/
+rabbitmq/#/
+rabbitmq/api/
+api/
+api/overview
+
+# ── Kafka Manager / AKHQ ─────────────────────────────────────────────────────
+kafka-manager/
+kafka-ui/
+akhq/
+
+# ── Flower (Celery) ──────────────────────────────────────────────────────────
+flower/
+flower/api/workers
+
+# ── WebLogic ─────────────────────────────────────────────────────────────────
+console/
+console/login/LoginForm.jsp
+wls-wsat/
+wls-wsat/CoordinatorPortType
+wls-wsat/RegistrationPortTypeRPC
+_async/
+async/
+asyncResponder
+
+# ── JBoss ────────────────────────────────────────────────────────────────────
+jboss-net/
+web-console/
+web-console/Invoker
+jmx-console/
+jmx-console/HtmlAdaptor
+jmx-console/checkJNDI
+invoker/
+invoker/JMXInvokerServlet
+invoker/EJBInvokerServlet
+management/
+status
+
+# ── GlassFish ────────────────────────────────────────────────────────────────
+management/domain/
+management/domain/applications/
+management/domain/resources/
+
+# ── Apache Tomcat Manager ─────────────────────────────────────────────────────
+manager/
+manager/html
+manager/status
+manager/text/
+host-manager/
+host-manager/html
+tomcat/
+
+# ── Struts2 ──────────────────────────────────────────────────────────────────
+struts2/
+struts/
+Struts2/
+
+# ── Spring Cloud Gateway ─────────────────────────────────────────────────────
+gateway/
+gateway/actuator
+gateway/actuator/env
+
+# ── Hadoop / YARN ────────────────────────────────────────────────────────────
+cluster/
+cluster/apps
+ws/v1/
+ws/v1/cluster/
+ws/v1/cluster/apps
+hdfs/
+
+# ── 监控/运维系统 ─────────────────────────────────────────────────────────────
+zabbix/
+zabbix/index.php
+nagios/
+nagios/cgi-bin/
+icinga/
+opsview/
+zentyal/
+cacti/
+cacti/graph_view.php
+
+# ── Hikvision 海康威视 ───────────────────────────────────────────────────────
+ISAPI/
+ISAPI/Security/
+ISAPI/Security/userCheck
+ISAPI/System/
+doc/page/
+doc/page/login.asp
+doc/page/login.aspx
+web/
+web/login.asp
+
+# ── Dahua 大华 ───────────────────────────────────────────────────────────────
+RPC2
+RPC_Loadfile/
+RPC_login
+onvif/
+device_service.php
+
+# ── 常见文件管理器 / 上传接口 ─────────────────────────────────────────────────
+filemanager/
+elfinder/
+elFinder/
+ckfinder/
+fckeditor/
+kindeditor/
+ueditor/
+ueditor/php/
+ueditor/net/
+upfile/
+upload_files/
+attachment/
+
+# ── 常见调试/信息泄露端点 ─────────────────────────────────────────────────────
+test/
+test.php
+test.jsp
+phpinfo.php
+info.php
+debug/
+trace/
+_profiler/
+__debugbar/
+telescope/
+horizon/
+phpunit.xml
+phptest.php

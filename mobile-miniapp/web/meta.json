@@ -1,0 +1,16 @@
+{
+  "id": "mobile-miniapp",
+  "name": "小程序安全",
+  "version": "0.1.0",
+  "author": "aegis-team",
+  "description": "移动安全：微信/支付宝小程序安全检测。",
+  "permissions": ["mobile:miniapp"],
+  "status": "placeholder",
+  "nav": {
+    "group": "移动安全",
+    "label": "小程序安全",
+    "icon": "LayoutGrid",
+    "order": 52
+  },
+  "headerTitle": "小程序安全检测"
+}

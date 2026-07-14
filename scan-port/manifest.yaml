@@ -1,0 +1,17 @@
+id: scan-port
+name: 端口扫描
+version: 0.4.0
+author: redops-team
+description: 对授权目标做端口扫描(内嵌 masscan 高速发现,无权限时回退纯 Go connect/UDP),识别开放端口与服务 banner
+depends_on: []
+min_kernel: 0.1.0
+permissions:
+  - portscan:view
+  - portscan:scan
+nav:
+  group: 扫描探测
+  label: 端口扫描
+  icon: Radar        # lucide 图标名(PascalCase),前端按名解析;模块自描述、无中心映射
+  order: 1
+storage:
+  migrations: migrations   # 模块自有表:启用时由框架按本目录下 *.sql 幂等建表

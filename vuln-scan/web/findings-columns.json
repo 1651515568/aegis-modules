@@ -1,0 +1,11 @@
+{
+  "_comment": "本模块命中展示列(平台 TaskDetail 据此出表)。key=对应 /findings 返回 item 的字段名;label=中文列标题;kind=渲染样式(severity 着色等级标签 / tag 灰色胶囊 / mono 等宽,省略=纯文本)。从上到下即列从左到右的顺序。维护只改本文件。",
+  "columns": [
+    { "key": "severity",   "label": "严重级别", "kind": "severity" },
+    { "key": "name",       "label": "漏洞名称" },
+    { "key": "host",       "label": "目标主机", "kind": "mono" },
+    { "key": "matchedAt",  "label": "命中位置", "kind": "mono" },
+    { "key": "templateId", "label": "模板 ID",  "kind": "mono" },
+    { "key": "tags",       "label": "标签",     "kind": "tag" }
+  ]
+}

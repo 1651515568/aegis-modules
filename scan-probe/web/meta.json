@@ -1,0 +1,16 @@
+{
+  "id": "scan-probe",
+  "name": "指纹识别",
+  "version": "0.1.0",
+  "author": "aegis-team",
+  "description": "扫描探测：Web 指纹识别、CMS 检测、中间件与框架版本识别。",
+  "permissions": ["probe:view", "probe:scan"],
+  "nav": {
+    "group": "扫描探测",
+    "label": "指纹识别",
+    "icon": "Fingerprint",
+    "order": 12
+  },
+  "headerTitle": "指纹识别",
+  "features": { "findings": true }
+}
