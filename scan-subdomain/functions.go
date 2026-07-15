@@ -303,6 +303,7 @@ func (m *Module) invokeEnumerate(w http.ResponseWriter, req invokeRequest) {
 	}
 
 	go func() {
+		defer m.runs.GuardPanic(taskID, m.log)
 		defer cancelFn() // 枚举结束时释放 ctx 资源，防止 context goroutine 泄漏
 		defer func() {
 			m.mu.Lock()

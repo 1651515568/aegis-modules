@@ -359,11 +359,13 @@ func (m *Module) invokeScan(w http.ResponseWriter, req invokeRequest) {
 	m.store.setCancel(cancel)
 
 	go func() {
+		defer m.runs.GuardPanic(taskID, m.log)
 		defer cancel()
 		sc := newScanner(m.log, m.store)
 
 		// 进度观察 goroutine:把 store 的实时扫描状态镜像成持久化任务进度。
 		done := make(chan struct{})
+		defer close(done)
 		go func() {
 			t := time.NewTicker(600 * time.Millisecond)
 			defer t.Stop()
@@ -387,7 +389,6 @@ func (m *Module) invokeScan(w http.ResponseWriter, req invokeRequest) {
 		}()
 
 		sc.run(ctx, opt) // 阻塞至扫描结束/取消
-		close(done)
 
 		st := m.store.status()
 		// 无论成功/取消，先落库命中，保证历史任务里始终有数据。

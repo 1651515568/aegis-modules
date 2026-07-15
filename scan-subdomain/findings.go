@@ -78,7 +78,8 @@ func (m *Module) listFindings(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		var item row
 		if err := rows.Scan(&item.Subdomain, &item.IP, &item.CDN, &item.Status, &item.Title, &item.Source, &item.FoundAt); err != nil {
-			continue
+			writeJSON(w, http.StatusInternalServerError, map[string]string{"error": err.Error()})
+			return
 		}
 		items = append(items, item)
 	}

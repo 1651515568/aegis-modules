@@ -257,7 +257,7 @@ func (m *Module) invokeScan(w http.ResponseWriter, req invokeRequest) {
 
 		_, _, found, _, _, _, _ := st.snapshot()
 		if ctx.Err() != nil {
-			_ = m.runs.Fail(taskID, "扫描已停止")
+			_ = m.runs.Cancel(taskID, "用户已取消扫描，已保存发现")
 		} else {
 			_ = m.runs.Succeed(taskID, map[string]any{
 				"found":  found,

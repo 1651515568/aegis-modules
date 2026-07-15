@@ -160,6 +160,7 @@ func (m *Module) invokeProbe(w http.ResponseWriter, req invokeRequest) {
 	}
 
 	go func() {
+		defer m.runs.GuardPanic(taskID, m.log)
 		defer cancelFn() // 扫描结束时释放 ctx 资源，防止 context goroutine 泄漏
 		defer func() {
 			m.mu.Lock()

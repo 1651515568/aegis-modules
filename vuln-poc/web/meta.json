@@ -4,13 +4,15 @@
   "version": "0.1.0",
   "author": "aegis-team",
   "description": "单条 PoC 精确验证，追踪漏洞生命周期（待确认→已确认→修复中→已修复）",
-  "permissions": ["vuln:scan", "vuln:view"],
+  "permissions": [
+    "vuln:scan",
+    "vuln:view"
+  ],
   "nav": {
     "group": "漏洞挖掘",
     "label": "全量漏洞库",
     "icon": "FlaskConical",
     "order": 22
   },
-  "headerTitle": "全量漏洞库",
-  "features": { "findings": true }
+  "headerTitle": "全量漏洞库"
 }
