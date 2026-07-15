@@ -359,6 +359,7 @@ func (m *Module) invokeBrute(w http.ResponseWriter, req invokeRequest) {
 	}
 
 	go func() {
+		defer m.runs.GuardPanic(taskID, m.log)
 		defer func() {
 			m.mu.Lock()
 			m.cancel = nil

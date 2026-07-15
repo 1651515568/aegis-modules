@@ -185,6 +185,7 @@ func (m *Module) invokeScan(w http.ResponseWriter, req invokeRequest) {
 	m.store.setCancel(cancel)
 
 	go func() {
+		defer m.runs.GuardPanic(taskID, m.log)
 		defer cancel()
 
 		// 进度观察 goroutine:把 store 的实时扫描状态镜像成持久化任务进度。

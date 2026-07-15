@@ -261,12 +261,8 @@ func (m *Module) invokeQuery(w http.ResponseWriter, req invokeRequest) {
 	writeJSON(w, http.StatusAccepted, map[string]string{"taskId": taskID})
 
 	go func() {
+		defer m.runs.GuardPanic(taskID, m.log)
 		defer func() {
-			// panic 兜底：任何 panic 都落终态，避免任务永卡 running（引擎不因单任务崩溃）。
-			if r := recover(); r != nil {
-				m.log.Warn("osint-fofa 查询 goroutine panic", "task", taskID, "panic", r)
-				_ = m.runs.Fail(taskID, fmt.Sprintf("内部错误: %v", r))
-			}
 			cancelFn() // 释放 WithTimeout 定时器资源
 			m.mu.Lock()
 			m.cancel = nil

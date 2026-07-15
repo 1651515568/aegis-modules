@@ -209,6 +209,7 @@ func (m *Module) invokeCollect(w http.ResponseWriter, req collectInvokeRequest) 
 	}
 
 	go func() {
+		defer m.runs.GuardPanic(taskID, m.log)
 		defer func() {
 			m.mu.Lock()
 			m.cancel = nil
