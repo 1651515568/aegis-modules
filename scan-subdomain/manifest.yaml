@@ -9,7 +9,7 @@ permissions:
   - subdomain:view
   - subdomain:scan
 nav:
-  group: 扫描探测
+  group: 资产测绘
   label: 子域名枚举
   icon: Network
   order: 13

@@ -9,9 +9,9 @@ permissions:
   - dirscan:view
   - dirscan:scan
 nav:
-  group: 扫描探测
+  group: 信息搜集
   label: 目录扫描
   icon: FolderSearch   # lucide 图标名(PascalCase),前端按名解析;模块自描述、无中心映射
-  order: 4
+  order: 14
 storage:
   migrations: migrations   # 模块自有表:启用时由框架按本目录下 *.sql 幂等建表

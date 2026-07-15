@@ -9,7 +9,7 @@ permissions:
   - ssl:view
   - ssl:scan
 nav:
-  group: 扫描探测
+  group: 信息搜集
   label: SSL/TLS 审计
   icon: ShieldCheck
   order: 17

@@ -8,7 +8,7 @@ min_kernel: 0.1.0
 permissions:
   - xcvuln:view
 nav:
-  group: 漏洞管理
+  group: 漏洞挖掘
   label: 信创漏洞库
   icon: ShieldAlert
   order: 53

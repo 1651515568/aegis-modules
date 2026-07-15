@@ -9,9 +9,9 @@ permissions:
   - portscan:view
   - portscan:scan
 nav:
-  group: 扫描探测
+  group: 信息搜集
   label: 端口扫描
   icon: Radar        # lucide 图标名(PascalCase),前端按名解析;模块自描述、无中心映射
-  order: 1
+  order: 16
 storage:
   migrations: migrations   # 模块自有表:启用时由框架按本目录下 *.sql 幂等建表

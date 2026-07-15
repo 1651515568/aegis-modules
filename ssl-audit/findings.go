@@ -132,7 +132,8 @@ func (m *Module) listFindings(w http.ResponseWriter, r *http.Request) {
 		var f findingRow
 		if err2 := frows.Scan(&f.ID, &f.TaskID, &f.Host, &f.Port,
 			&f.Severity, &f.Category, &f.Label, &f.Detail, &f.Evidence, &f.FoundAt); err2 != nil {
-			continue
+			writeJSON(w, http.StatusInternalServerError, map[string]string{"error": err2.Error()})
+			return
 		}
 		findings = append(findings, f)
 	}
@@ -162,7 +163,8 @@ func (m *Module) listFindings(w http.ResponseWriter, r *http.Request) {
 			&c.Subject, &c.Issuer, &c.NotBefore, &c.NotAfter, &c.DaysLeft,
 			&c.KeyType, &c.KeyBits, &c.SigAlgo, &sansStr,
 			&c.TLSVersion, &c.Cipher, &c.HSTS, &selfSign, &c.ScanErr, &c.FoundAt); err2 != nil {
-			continue
+			writeJSON(w, http.StatusInternalServerError, map[string]string{"error": err2.Error()})
+			return
 		}
 		c.SelfSigned = selfSign != 0
 		if sansStr != "" {

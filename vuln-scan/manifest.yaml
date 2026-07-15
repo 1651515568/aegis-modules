@@ -9,7 +9,7 @@ permissions:
   - vuln:scan
   - vuln:view
 nav:
-  group: 漏洞管理
+  group: 漏洞挖掘
   label: 漏洞扫描
   icon: ScanSearch
   order: 21

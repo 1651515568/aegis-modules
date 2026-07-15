@@ -9,9 +9,9 @@ permissions:
   - backup:view
   - backup:scan
 nav:
-  group: 扫描探测
+  group: 信息搜集
   label: 备份文件
   icon: FileArchive   # lucide 图标名，前端按名解析；模块自描述、无中心映射
-  order: 2
+  order: 11
 storage:
   migrations: migrations   # 模块自有表:启用时由框架按本目录下 *.sql 幂等建表

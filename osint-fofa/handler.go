@@ -23,6 +23,7 @@ func (m *Module) Routes() []core.Route {
 		{Method: "GET", Path: "/settings", Handler: m.getSettings, Permission: "osint:view"},
 		{Method: "POST", Path: "/settings", Handler: m.saveSettings, Permission: "osint:query"},
 		{Method: "POST", Path: "/invoke", Handler: m.invokeFunction, Permission: "osint:query"},
+		{Method: "POST", Path: "/stop", Handler: m.stopQuery, Permission: "osint:query"},
 		{Method: "GET", Path: "/tasks/*", Handler: m.getTask, Permission: "osint:view"},
 		{Method: "GET", Path: "/findings", Handler: m.listFindings, Permission: "osint:view"},
 		{Method: "POST", Path: "/findings/clear", Handler: m.clearFindings, Permission: "osint:query"},
@@ -116,4 +117,16 @@ func writeJSON(w http.ResponseWriter, code int, v any) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(code)
 	_ = json.NewEncoder(w).Encode(v)
+}
+
+// stopQuery 取消当前运行中的查询任务（若有），供前端「停止」按钮调用。
+// 触发 invokeQuery 里 ctx 的取消，goroutine 会走取消分支落 Cancel 终态并归档已得资产。
+func (m *Module) stopQuery(w http.ResponseWriter, _ *http.Request) {
+	m.mu.Lock()
+	c := m.cancel
+	m.mu.Unlock()
+	if c != nil {
+		c()
+	}
+	writeJSON(w, http.StatusOK, map[string]any{"stopped": c != nil})
 }

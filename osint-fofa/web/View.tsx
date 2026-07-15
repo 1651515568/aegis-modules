@@ -208,8 +208,10 @@ export default function FofaView() {
     }
   }
 
-  function stopQuery() {
+  async function stopQuery() {
     stoppedRef.current = true
+    // 真正通知引擎取消当前查询（原先仅复位本地状态，后台仍会跑到超时）。
+    try { await enginePost(CAP, '/stop', {}) } catch { /* 停止请求失败也照常复位本地状态 */ }
     setRunning(false); setProgress(null); setProgressPct(0)
   }
 

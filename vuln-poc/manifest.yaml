@@ -9,7 +9,7 @@ permissions:
   - vuln:scan
   - vuln:view
 nav:
-  group: 漏洞管理
+  group: 漏洞挖掘
   label: PoC 验证
   icon: FlaskConical
   order: 22
