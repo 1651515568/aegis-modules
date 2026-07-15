@@ -9,7 +9,7 @@ permissions:
   - jsextract:view
   - jsextract:scan
 nav:
-  group: 扫描探测
+  group: 信息搜集
   label: JS 信息提取
   icon: FileCode2
   order: 18

@@ -13,6 +13,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
+
+	"redops/core"
 )
 
 // findingRow 是归档资产的对外形态，与 Asset 结构字段对齐。
@@ -45,24 +47,28 @@ func (m *Module) saveFindings(taskID string, assets []Asset) {
 		return
 	}
 	tbl := m.db.Table("findings")
-	// 先删除同 task_id 旧记录，再批量插入（覆盖语义）
-	if _, err := m.db.Exec("DELETE FROM "+tbl+" WHERE task_id=?", taskID); err != nil {
-		m.log.Warn("osint-fofa findings 清旧记录失败", "task", taskID, "err", err)
-		return
-	}
 	now := time.Now().Format("2006-01-02 15:04:05")
-	for _, a := range assets {
-		assetID := makeAssetID(taskID, a.IP, a.Port)
-		_, err := m.db.Exec(
-			`INSERT OR REPLACE INTO `+tbl+
-				` (task_id, asset_id, ip, port, domain, protocol, title, banner, country, city, os, source, created_at)`+
-				` VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)`,
-			taskID, assetID, a.IP, a.Port, a.Domain, a.Protocol,
-			a.Title, a.Banner, a.Country, a.City, a.OS, a.Source, now,
-		)
-		if err != nil {
-			m.log.Warn("osint-fofa finding 写入失败", "task", taskID, "ip", a.IP, "port", a.Port, "err", err)
+	// 覆盖式归档：DELETE + 批量 INSERT 包进事务，保证同 task_id 覆盖的原子性（对齐 scan-port）。
+	if err := m.db.WithTx(func(tx core.DB) error {
+		if _, err := tx.Exec("DELETE FROM "+tbl+" WHERE task_id=?", taskID); err != nil {
+			return err
 		}
+		for _, a := range assets {
+			assetID := makeAssetID(taskID, a.IP, a.Port)
+			if _, err := tx.Exec(
+				`INSERT OR REPLACE INTO `+tbl+
+					` (task_id, asset_id, ip, port, domain, protocol, title, banner, country, city, os, source, created_at)`+
+					` VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+				taskID, assetID, a.IP, a.Port, a.Domain, a.Protocol,
+				a.Title, a.Banner, a.Country, a.City, a.OS, a.Source, now,
+			); err != nil {
+				m.log.Warn("osint-fofa finding 写入失败", "task", taskID, "ip", a.IP, "port", a.Port, "err", err)
+			}
+		}
+		return nil
+	}); err != nil {
+		m.log.Warn("osint-fofa findings 归档事务失败", "task", taskID, "err", err)
+		return
 	}
 	m.log.Info("osint-fofa findings 已归档", "task", taskID, "count", len(assets))
 }
@@ -105,9 +111,14 @@ func (m *Module) listFindings(w http.ResponseWriter, r *http.Request) {
 			&f.Protocol, &f.Title, &f.Banner, &f.Country, &f.City,
 			&f.OS, &f.Source, &f.CreatedAt,
 		); err != nil {
-			continue
+			writeJSON(w, http.StatusInternalServerError, map[string]string{"error": err.Error()})
+			return
 		}
 		items = append(items, f)
+	}
+	if err := rows.Err(); err != nil {
+		writeJSON(w, http.StatusInternalServerError, map[string]string{"error": "数据库读取错误: " + err.Error()})
+		return
 	}
 	writeJSON(w, http.StatusOK, map[string]any{"items": items, "total": len(items)})
 }

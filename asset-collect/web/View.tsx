@@ -409,15 +409,18 @@ export default function AssetCollectView() {
     setErr(null); setResults([]); setProgressPct(0)
     setFilterType('all'); setFilterSrc('all'); setFilterQ(''); setSortKey(null)
 
-    const params = { target: target.trim(), targetType, ...keys }
+    // 平台任务台账只存非敏感参数；密钥仅随引擎 /invoke 下发（引擎侧对空值走 /settings 兜底），
+    // 避免 19 个情报源 API Key 明文落入平台 tasks.params 存档。
+    const taskParams = { target: target.trim(), targetType }
+    const engineParams = { ...taskParams, ...keys }
     let task: Awaited<ReturnType<typeof createTask>> | null = null
     let finished: TaskRecord | null = null
 
     setRunning(true); setProgress('启动收集…'); setTaskReload(n => n + 1)
     try {
-      task = await createTask({ capabilityKey: CAP, action: 'collect', params })
+      task = await createTask({ capabilityKey: CAP, action: 'collect', params: taskParams })
       setTaskReload(n => n + 1)
-      await enginePost(CAP, '/invoke', { taskId: task.id, function: 'collect', params })
+      await enginePost(CAP, '/invoke', { taskId: task.id, function: 'collect', params: engineParams })
       finished = await pollTask(task.id, {
         intervalMs: 2000, timeoutMs: 20 * 60 * 1000,
         onProgress: t => {

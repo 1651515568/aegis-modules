@@ -12,6 +12,6 @@ nav:
   group: 资产测绘
   label: 空间测绘
   icon: Satellite
-  order: 43
+  order: 3
 storage:
   migrations: migrations

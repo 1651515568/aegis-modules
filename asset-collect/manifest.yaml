@@ -12,6 +12,6 @@ nav:
   group: 资产测绘
   label: 资产收集
   icon: Layers
-  order: 41
+  order: 1
 storage:
   migrations: migrations

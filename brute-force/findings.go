@@ -37,6 +37,9 @@ func (m *Module) saveFindings(taskID string, results []BruteResult) {
 	}
 	now := time.Now().Format("2006-01-02 15:04:05")
 	for _, r := range results {
+		if !r.Success {
+			continue // findings 只归档成功凭据，失败尝试不入命中表（避免 TaskDetail 误当命中展示）
+		}
 		foundAt := r.FoundAt
 		if foundAt == "" {
 			foundAt = now

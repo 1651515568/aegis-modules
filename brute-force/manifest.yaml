@@ -9,7 +9,7 @@ permissions:
   - brute:view
   - brute:run
 nav:
-  group: 扫描探测
+  group: 漏洞挖掘
   label: 弱口令爆破
   icon: KeySquare
   order: 20

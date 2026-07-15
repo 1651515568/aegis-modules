@@ -1,0 +1,12 @@
+{
+  "_comment": "本模块命中展示列(平台 TaskDetail 据此出表)。key=对应 /findings 返回 item 的字段名;kind=渲染样式(tag 灰色胶囊 / mono 等宽,省略=纯文本)。从上到下即列从左到右。",
+  "columns": [
+    { "key": "ip",       "label": "IP",   "kind": "mono" },
+    { "key": "port",     "label": "端口", "kind": "mono" },
+    { "key": "domain",   "label": "域名", "kind": "mono" },
+    { "key": "protocol", "label": "协议", "kind": "tag" },
+    { "key": "title",    "label": "标题" },
+    { "key": "source",   "label": "来源", "kind": "tag" },
+    { "key": "city",     "label": "城市" }
+  ]
+}

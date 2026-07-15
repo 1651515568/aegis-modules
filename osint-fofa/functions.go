@@ -262,6 +262,11 @@ func (m *Module) invokeQuery(w http.ResponseWriter, req invokeRequest) {
 
 	go func() {
 		defer func() {
+			// panic 兜底：任何 panic 都落终态，避免任务永卡 running（引擎不因单任务崩溃）。
+			if r := recover(); r != nil {
+				m.log.Warn("osint-fofa 查询 goroutine panic", "task", taskID, "panic", r)
+				_ = m.runs.Fail(taskID, fmt.Sprintf("内部错误: %v", r))
+			}
 			cancelFn() // 释放 WithTimeout 定时器资源
 			m.mu.Lock()
 			m.cancel = nil
@@ -275,8 +280,10 @@ func (m *Module) invokeQuery(w http.ResponseWriter, req invokeRequest) {
 		}, m.log)
 
 		if err != nil {
+			// 无论失败/取消，先归档已获取的部分资产，保证任务里始终有数据。
+			m.saveFindings(taskID, assets)
 			if ctx.Err() != nil {
-				_ = m.runs.Fail(taskID, "查询已被取消")
+				_ = m.runs.Cancel(taskID, fmt.Sprintf("查询已取消，已保存资产 %d 条", len(assets)))
 			} else {
 				_ = m.runs.Fail(taskID, err.Error())
 			}
