@@ -6,7 +6,7 @@
   "description": "扫描探测：Web 指纹识别、CMS 检测、中间件与框架版本识别。",
   "permissions": ["probe:view", "probe:scan"],
   "nav": {
-    "group": "扫描探测",
+    "group": "信息搜集",
     "label": "指纹识别",
     "icon": "Fingerprint",
     "order": 12

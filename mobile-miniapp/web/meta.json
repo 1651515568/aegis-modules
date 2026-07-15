@@ -7,7 +7,7 @@
   "permissions": ["mobile:miniapp"],
   "status": "placeholder",
   "nav": {
-    "group": "移动安全",
+    "group": "信息搜集",
     "label": "小程序安全",
     "icon": "LayoutGrid",
     "order": 52

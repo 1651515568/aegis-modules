@@ -6,7 +6,7 @@
   "description": "冰蝎协议兼容的 Webshell 管理，支持 PHP/JSP/ASPX，提供终端执行、文件管理、系统信息收集。",
   "permissions": ["webshell:view", "webshell:manage"],
   "nav": {
-    "group": "后渗透",
+    "group": "权限提升与持久化",
     "label": "Webshell 管理",
     "icon": "Terminal",
     "order": 31

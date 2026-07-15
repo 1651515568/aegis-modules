@@ -6,7 +6,7 @@
   "description": "多模式子域名枚举：字典爆破 + DNS 递归 + 证书透明度（crt.sh / hackertarget / certspotter），并整合 11 个威胁情报平台（Hunter / ZoomEye / Quake / FOFA / Shodan / SecurityTrails / Censys / VirusTotal / Chaos / 微步 / 零零信安）。",
   "permissions": ["subdomain:view", "subdomain:scan"],
   "nav": {
-    "group": "扫描探测",
+    "group": "资产测绘",
     "label": "子域名枚举",
     "icon": "Network",
     "order": 13

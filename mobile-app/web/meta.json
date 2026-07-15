@@ -7,7 +7,7 @@
   "permissions": ["mobile:app"],
   "status": "placeholder",
   "nav": {
-    "group": "移动安全",
+    "group": "信息搜集",
     "label": "APP安全",
     "icon": "Smartphone",
     "order": 51

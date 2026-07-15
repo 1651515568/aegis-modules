@@ -6,7 +6,7 @@
   "description": "扫描探测：备份文件与敏感文件泄露探测。",
   "permissions": ["backup:view", "backup:scan"],
   "nav": {
-    "group": "扫描探测",
+    "group": "信息搜集",
     "label": "备份文件",
     "icon": "FileArchive",
     "order": 11

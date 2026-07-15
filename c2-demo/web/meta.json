@@ -7,7 +7,7 @@
   "permissions": ["c2:view", "c2:interact"],
   "status": "placeholder",
   "nav": {
-    "group": "后渗透",
+    "group": "权限提升与持久化",
     "label": "C2 会话管理",
     "icon": "Terminal",
     "order": 33

@@ -6,7 +6,7 @@
   "description": "批量检测目标的 SSL/TLS 配置缺陷：证书有效性、弱协议版本、弱密码套件、HSTS 缺失。",
   "permissions": ["ssl:view", "ssl:scan"],
   "nav": {
-    "group": "扫描探测",
+    "group": "信息搜集",
     "label": "SSL/TLS 审计",
     "icon": "ShieldCheck",
     "order": 17

@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "浏览 AEGIS 内置产品指纹库，支持名称/标签搜索与分类过滤。",
   "nav": {
-    "group": "漏洞管理",
+    "group": "信息搜集",
     "label": "指纹库",
     "icon": "Fingerprint",
     "order": 52
