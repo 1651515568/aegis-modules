@@ -228,6 +228,7 @@ func (m *Module) invokeCollect(w http.ResponseWriter, req collectInvokeRequest) 
 				m.saveFindings(taskID, assets)
 				_ = m.runs.Cancel(taskID, fmt.Sprintf("用户手动停止，已保存资产 %d 条", len(assets)))
 			} else {
+				m.saveFindings(taskID, assets) // 失败也先归档已收集资产，任务不空手
 				_ = m.runs.Fail(taskID, err.Error())
 			}
 			return

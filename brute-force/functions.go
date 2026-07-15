@@ -389,6 +389,7 @@ func (m *Module) invokeBrute(w http.ResponseWriter, req invokeRequest) {
 				m.saveFindings(taskID, results)
 				_ = m.runs.Cancel(taskID, fmt.Sprintf("用户手动停止，已保存 %d 条结果", len(results)))
 			} else {
+				m.saveFindings(taskID, results) // 失败也先归档已得结果，任务不空手
 				_ = m.runs.Fail(taskID, err.Error())
 			}
 			return

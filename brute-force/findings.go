@@ -96,9 +96,14 @@ func (m *Module) listFindings(w http.ResponseWriter, r *http.Request) {
 			&f.TaskID, &f.Protocol, &f.Target, &f.Username, &f.Password,
 			&f.Success, &f.ErrMsg, &f.FoundAt,
 		); err != nil {
-			continue
+			writeJSON(w, http.StatusInternalServerError, map[string]string{"error": err.Error()})
+			return
 		}
 		items = append(items, f)
+	}
+	if err := rows.Err(); err != nil {
+		writeJSON(w, http.StatusInternalServerError, map[string]string{"error": "数据库读取错误: " + err.Error()})
+		return
 	}
 	writeJSON(w, http.StatusOK, map[string]any{"items": items, "total": len(items)})
 }
