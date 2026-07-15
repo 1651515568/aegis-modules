@@ -1,7 +1,0 @@
-{
-  "name": "@redops/module-scan-probe",
-  "type": "module",
-  "scripts": { "build": "vite build", "watch": "vite build --watch" },
-  "peerDependencies": { "vue": "^3.4.0" },
-  "devDependencies": { "@vitejs/plugin-vue": "^5.0.4", "vite": "^5.2.11", "vue": "^3.4.27" }
-}
